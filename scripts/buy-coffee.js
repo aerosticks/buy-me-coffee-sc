@@ -41,6 +41,7 @@ async function main() {
   console.log("BuyMeACoffee deployed to:", buyMeACoffee.target);
 
   const addresses = [owner.address, tipper.address, buyMeACoffee.target];
+  console.log("== owner address ==\n", await buyMeACoffee.getOwnerAddress());
   console.log("== start ==");
   await printBalances(addresses);
 
@@ -67,6 +68,16 @@ async function main() {
   console.log("== memos ==");
   const memos = await buyMeACoffee.getMemos();
   printMemos(memos);
+
+  const changeOwner = await buyMeACoffee
+    .connect(owner)
+    .changeOwner(addresses[1]);
+  //   console.log("new owner return", changeOwner);
+
+  console.log(
+    "== new owner address ==\n",
+    await buyMeACoffee.getOwnerAddress()
+  );
 }
 
 main().then(() =>

@@ -37,6 +37,6 @@
 
 ### Deployed contract address (sepolia)
 
-0xdbd3742850d225857fecfe296d078249c513b418
+0x2747724BEb99F625E99b350f2fec1631fB1cd9A8
 
-https://sepolia.etherscan.io/address/0xdBD3742850D225857feCFe296D078249C513b418
+https://sepolia.etherscan.io/address/0x2747724BEb99F625E99b350f2fec1631fB1cd9A8
